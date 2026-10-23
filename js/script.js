@@ -299,3 +299,64 @@ document.addEventListener("DOMContentLoaded", function () {
     setupMobileMenu();
   }
 })();
+
+
+
+/* AISTEMiQ mobile hamburger menu — append-only fix */
+(function () {
+  function initAistemiqMobileMenu() {
+    const button = document.getElementById("menuToggle");
+    const nav = document.getElementById("navLinks");
+
+    if (!button || !nav) return;
+
+    // Avoid attaching the same handler more than once.
+    if (button.dataset.menuFixInitialized === "true") return;
+    button.dataset.menuFixInitialized = "true";
+
+    function closeMenu() {
+      nav.classList.remove("mobile-menu-open");
+      button.setAttribute("aria-expanded", "false");
+      button.setAttribute("aria-label", "Open navigation menu");
+    }
+
+    function toggleMenu() {
+      const isOpen = nav.classList.toggle("mobile-menu-open");
+
+      button.setAttribute("aria-expanded", String(isOpen));
+      button.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+    }
+
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      toggleMenu();
+    });
+
+    nav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!nav.contains(event.target) && !button.contains(event.target)) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") closeMenu();
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener(
+      "DOMContentLoaded",
+      initAistemiqMobileMenu
+    );
+  } else {
+    initAistemiqMobileMenu();
+  }
+})();
