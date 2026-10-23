@@ -2036,3 +2036,63 @@ img {
     touch-action: manipulation;
   }
 }
+
+
+/* AISTEMiQ — Frosted glass mobile navigation */
+@media (max-width: 768px) {
+  #navLinks.mobile-menu-open {
+    background: rgba(10, 16, 36, 0.72) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(165%);
+    backdrop-filter: blur(24px) saturate(165%);
+
+    border: 1px solid rgba(126, 220, 255, 0.25);
+    border-radius: 20px;
+
+    box-shadow:
+      0 20px 55px rgba(0, 0, 0, 0.42),
+      0 0 25px rgba(76, 190, 255, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.10);
+
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  /* Subtle neon glass reflection */
+  #navLinks.mobile-menu-open::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(101, 237, 255, 0.09),
+        transparent 42%,
+        rgba(167, 123, 255, 0.10)
+      );
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  /* Keep menu items readable above the glass */
+  #navLinks.mobile-menu-open a {
+    position: relative;
+    z-index: 1;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.025);
+    transition: background 180ms ease, color 180ms ease;
+  }
+
+  #navLinks.mobile-menu-open a:hover,
+  #navLinks.mobile-menu-open a:focus-visible {
+    background: rgba(101, 237, 255, 0.10);
+    color: #75efff;
+    outline: none;
+  }
+
+  /* Slight glass highlight around the hamburger */
+  #menuToggle {
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+  }
+}
+
