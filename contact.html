@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080611">
+  <meta name="description" content="Contact AISTEMiQ for STEM education, robotics programs, curriculum partnerships, AI labs and technology training.">
+  <title>Contact Us | AISTEMiQ</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .legal-page{max-width:1100px;margin:auto;padding:60px 22px;color:#e8edff}
+    .legal-hero{text-align:center;padding:35px 0 45px}
+    .legal-hero h1{font-size:clamp(34px,5vw,52px);margin:15px 0}
+    .legal-gradient{background:linear-gradient(90deg,#a77bff,#65edff);background-clip:text;-webkit-background-clip:text;color:transparent}
+    .legal-muted{color:#aeb6ca;line-height:1.8}
+    .contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+    .contact-card{padding:25px;border:1px solid rgba(139,92,246,.28);border-radius:18px;background:rgba(22,15,39,.78)}
+    .contact-card h2{margin-top:0}
+    .contact-form{display:grid;gap:15px}
+    .contact-form label{display:grid;gap:7px;font-size:14px;font-weight:650}
+    .contact-form input,.contact-form select,.contact-form textarea{width:100%;padding:13px;border:1px solid rgba(255,255,255,.14);border-radius:10px;background:#0b0814;color:#edf1ff;font:inherit}
+    .contact-form textarea{min-height:120px;resize:vertical}
+    .contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{outline:2px solid #65edff}
+    .contact-btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border:0;border-radius:11px;background:linear-gradient(100deg,#65edff,#a77bff);color:#080611;font-weight:800;text-decoration:none;cursor:pointer}
+    .contact-links{display:grid;gap:13px;margin-top:20px}
+    .contact-links a{color:#65edff;text-decoration:none;overflow-wrap:anywhere}
+    .contact-links a:hover{text-decoration:underline}
+    .contact-foot{font-size:12px;color:#939db2;line-height:1.7}
+    @media(max-width:700px){.contact-grid{grid-template-columns:1fr}.legal-page{padding-top:35px}}
+  </style>
+</head>
+<body>
+  <header class="main-nav">
+    <div class="nav-inner">
+      <a class="brand brand-image" href="index.html" aria-label="AISTEMiQ Home">
+        <img src="assets/aistemiq-logo.png" alt="AISTEMiQ" style="width:205px;max-height:58px;object-fit:contain">
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="curriculum.html">Curriculum</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="legal-page">
+    <section class="legal-hero">
+      <span class="legal-gradient">LET'S CONNECT</span>
+      <h1>Let's Build Something <span class="legal-gradient">Innovative</span></h1>
+      <p class="legal-muted">
+        Have a question about robotics, STEM education, coding programs,
+        curriculum partnerships or AI lab setup? Tell us what you need.
+      </p>
+    </section>
+
+    <div class="contact-grid">
+      <section class="contact-card">
+        <h2>Send an Enquiry</h2>
+        <p class="legal-muted">Share your requirements and continue the conversation on WhatsApp.</p>
+
+        <form class="contact-form" id="contact-form">
+          <label for="contact-name">Your name *
+            <input id="contact-name" name="name" required autocomplete="name" placeholder="Enter your name">
+          </label>
+
+          <label for="contact-phone">Your phone number *
+            <input id="contact-phone" name="phone" type="tel" required autocomplete="tel" placeholder="Enter your number">
+          </label>
+
+          <label for="contact-type">I'm interested in *
+            <select id="contact-type" name="interest" required>
+              <option value="">Choose an enquiry type</option>
+              <option>Student STEM and Robotics Programs</option>
+              <option>Coding, Python and AI Programs</option>
+              <option>Curriculum and Books</option>
+              <option>AI and STEM Lab Setup</option>
+              <option>School or Institution Partnership</option>
+              <option>Education IT Institute Partnership</option>
+              <option>Other Enquiry</option>
+            </select>
+          </label>
+
+          <label for="contact-message">Your message *
+            <textarea id="contact-message" name="message" required placeholder="Tell us about your requirements"></textarea>
+          </label>
+
+          <button class="contact-btn" type="submit">Continue on WhatsApp ↗</button>
+          <p class="contact-foot">WhatsApp will open with your message ready to review. You must press Send in WhatsApp to deliver it.</p>
+        </form>
+      </section>
+
+      <aside class="contact-card">
+        <h2>Contact AISTEMiQ</h2>
+        <p class="legal-muted">
+          We welcome enquiries from schools, colleges, educators, parents
+          and potential education partners.
+        </p>
+
+        <div class="contact-links">
+          <div><strong>WhatsApp / Phone</strong><br>
+            <a href="https://wa.me/919004130508">+91 90041 30508 — WhatsApp</a><br>
+            <a href="tel:+919004130508">Call +91 90041 30508</a>
+          </div>
+          <div><strong>Explore</strong><br>
+            <a href="programs.html">Programs & Partnerships</a><br>
+            <a href="curriculum.html">Curriculum</a><br>
+            <a href="https://prime-aihub.github.io/AISTEMiQ/" target="_blank" rel="noopener">STEM Kits Store ↗</a>
+          </div>
+        </div>
+
+        <hr style="border:0;border-top:1px solid rgba(255,255,255,.1);margin:25px 0">
+        <h3>What should you include?</h3>
+        <p class="legal-muted">
+          Your institution or organisation, student age group, expected
+          number of learners, existing facilities and the type of program
+          you're considering.
+        </p>
+      </aside>
+    </div>
+  </main>
+
+  <footer style="text-align:center;padding:24px;color:#9ba4b8;border-top:1px solid rgba(255,255,255,.07)">
+    © <span id="year"></span> AISTEMiQ ·
+    <a href="privacy.html">Privacy Policy</a> ·
+    <a href="terms.html">Terms & Conditions</a>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      if (!this.reportValidity()) return;
+
+      const data = new FormData(this);
+      const message = [
+        "Hello AISTEMiQ! I have a new enquiry.",
+        "",
+        "Name: " + data.get("name"),
+        "Phone: " + data.get("phone"),
+        "Interest: " + data.get("interest"),
+        "Message: " + data.get("message")
+      ].join("\n");
+
+      window.open(
+        "https://wa.me/919004130508?text=" + encodeURIComponent(message),
+        "_blank",
+        "noopener,noreferrer"
+      );
+    });
+  </script>
+</body>
+</html>

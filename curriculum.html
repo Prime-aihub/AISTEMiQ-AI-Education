@@ -1,0 +1,797 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070b18">
+
+  <title>AISTEMiQ Curriculum | From Curious Minds to Future Engineers</title>
+  <meta name="description" content="Explore the AISTEMiQ age-based STEM curriculum, junior and senior engineering handbooks, coding, Python, C, C++, Arduino, web development and cybersecurity learning pathways.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/curriculum.css">
+
+  <script src="js/main.js" defer></script>
+  <script src="js/curriculum.js" defer></script>
+</head>
+
+<body class="curriculum-page">
+
+  <div class="announcement">
+    <p>Curiosity today. Innovation tomorrow.
+      <a href="#learning-map">Explore learning paths ↗</a>
+    </p>
+  </div>
+
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      
+<a class="brand brand-image" href="index.html" aria-label="AISTEMiQ homepage">
+  <img src="assets/aistemiq-logo.png" alt="AISTEMiQ — Future Skills, Built Here">
+</a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#ecosystem">Our ecosystem</a>
+        <a href="programs.html">Programs</a>
+        <a href="curriculum.html" class="nav-highlight" aria-current="page">
+          <span class="curriculum-icon">✳</span>
+          Curriculum
+          <span class="nav-new">EXPLORE</span>
+        </a>
+        <a href="index.html#schools">For schools</a>
+        <a href="index.html#about">About us</a>
+        <a class="nav-cta" href="contact.html">Let's talk <span>↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- LANDSCAPE HERO -->
+    <section class="curriculum-hero">
+      <div class="curriculum-hero-grid"></div>
+      <div class="curriculum-hero-glow"></div>
+
+      <div class="container curriculum-hero-inner">
+        <div class="curriculum-hero-copy">
+          <div class="eyebrow">
+            <span class="status-dot"></span>
+            THE AISTEMiQ LEARNING UNIVERSE
+          </div>
+
+          <h1>
+            Every innovator
+            <span class="gradient-text">starts somewhere.</span>
+          </h1>
+
+          <p class="curriculum-hero-lead">
+            A progressive journey from discovering circuits and science
+            to engineering intelligent systems, writing code and building
+            real-world technology projects.
+          </p>
+
+          <div class="curriculum-hero-actions">
+            <a class="button button-primary" href="#learning-map">
+              Explore age pathways <span>↓</span>
+            </a>
+            <a class="button button-secondary" href="#coding-pathways">
+              Discover coding tracks
+            </a>
+          </div>
+
+          <div class="hero-tags">
+            <span>01 / DISCOVER</span>
+            <span>02 / EXPLORE</span>
+            <span>03 / ENGINEER</span>
+            <span>04 / INNOVATE</span>
+          </div>
+        </div>
+
+        <div class="curriculum-hero-art">
+          <div class="hero-art-ring ring-a"></div>
+          <div class="hero-art-ring ring-b"></div>
+          <div class="hero-art-ring ring-c"></div>
+
+          <div class="hero-image-frame">
+            <img
+              src="assets/images/curriculum-collection.png"
+              alt="AISTEMiQ education book collection featuring coding, robotics, cybersecurity, AI and age-based engineering handbooks"
+              class="curriculum-collection-image"
+            >
+            <div class="hero-image-overlay"></div>
+          </div>
+
+          <div class="hero-float-note note-one">
+            <span class="float-note-icon">⌘</span>
+            <span><strong>Hands-on learning</strong><small>Build. Test. Improve.</small></span>
+          </div>
+
+          <div class="hero-float-note note-two">
+            <span class="float-note-icon purple-icon">✳</span>
+            <span><strong>Age-aware pathways</strong><small>Grow step by step</small></span>
+          </div>
+
+          <div class="hero-art-caption">
+            <span class="status-dot"></span>
+            LEARN TECHNOLOGY BY UNDERSTANDING IT
+          </div>
+        </div>
+      </div>
+
+      <a class="hero-scroll" href="#learning-map">
+        <span></span> SCROLL TO EXPLORE
+      </a>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="curriculum-intro section-pad">
+      <div class="container intro-grid">
+        <div>
+          <p class="eyebrow">MORE THAN A COLLECTION OF BOOKS</p>
+          <h2>A learning journey that <span class="gradient-text">grows with the learner.</span></h2>
+        </div>
+
+        <div class="intro-copy">
+          <p>
+            AISTEMiQ is built around a simple idea: help learners understand
+            the principles behind technology before asking them to build
+            increasingly complex systems.
+          </p>
+          <p>
+            Start with science, circuits and sensors. Progress into logical
+            thinking, robotics and embedded systems. Then explore advanced
+            programming, AI concepts and engineering challenges.
+          </p>
+        </div>
+      </div>
+
+      <div class="container curriculum-principles">
+        <article class="principle">
+          <span class="principle-number">01</span>
+          <span class="principle-icon">⌁</span>
+          <h3>Understand</h3>
+          <p>Build strong foundations through clear concepts and guided discovery.</p>
+        </article>
+        <article class="principle">
+          <span class="principle-number">02</span>
+          <span class="principle-icon">⌘</span>
+          <h3>Experiment</h3>
+          <p>Explore circuits, components, code and technology in practical activities.</p>
+        </article>
+        <article class="principle">
+          <span class="principle-number">03</span>
+          <span class="principle-icon">◇</span>
+          <h3>Engineer</h3>
+          <p>Connect ideas and apply structured problem-solving to projects.</p>
+        </article>
+        <article class="principle">
+          <span class="principle-number">04</span>
+          <span class="principle-icon">✳</span>
+          <h3>Innovate</h3>
+          <p>Develop the confidence to design, test and improve original ideas.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- VERTICAL AGE PATHWAY -->
+    <section class="learning-map-section section-pad" id="learning-map">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THE AGE-WISE LEARNING MAP</p>
+            <h2>Four stages.<br><span class="gradient-text">One evolving mind.</span></h2>
+          </div>
+          <p class="section-intro">
+            Move down the pathway to discover how learning progresses
+            from curiosity to pre-engineering.
+          </p>
+        </div>
+
+        <div class="map-legend">
+          <span><i class="legend-dot dot-cyan"></i> Foundation</span>
+          <span><i class="legend-dot dot-blue"></i> Exploration</span>
+          <span><i class="legend-dot dot-purple"></i> Engineering</span>
+          <span><i class="legend-dot dot-gold"></i> Advanced</span>
+        </div>
+
+        <div class="learning-map">
+
+          <!-- STAGE 1 -->
+          <article class="learning-stage stage-cyan reveal-stage">
+            <div class="stage-track">
+              <span class="stage-node">01</span>
+              <span class="stage-line"></span>
+            </div>
+
+            <div class="stage-card">
+              <div class="stage-card-top">
+                <span class="stage-level">FOUNDATION LEVEL</span>
+                <span class="stage-age">AGE 8–10</span>
+              </div>
+
+              <h3>Junior Engineers</h3>
+              <p class="stage-tagline">Discovering science and building curiosity.</p>
+
+              <p class="stage-description">
+                Start with the fundamentals of electronics, circuits, sensors
+                and energy. Encourage learners to ask questions, explore
+                components safely and understand how everyday technology works.
+              </p>
+
+              <div class="stage-topics">
+                <span>Basic circuits</span>
+                <span>LEDs & components</span>
+                <span>Sensors</span>
+                <span>Energy concepts</span>
+                <span>Guided experiments</span>
+                <span>Simple automation</span>
+              </div>
+
+              <div class="stage-outcome">
+                <span class="outcome-symbol">✳</span>
+                <div>
+                  <strong>The learning goal</strong>
+                  <p>Build curiosity, component awareness, safe habits and confidence through guided activities.</p>
+                </div>
+              </div>
+
+              <div class="stage-card-footer">
+                <span class="handbook-mark">AISTEMiQ / HANDBOOK 01</span>
+                <a href="#handbooks" class="text-link">Explore handbook <span>↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- STAGE 2 -->
+          <article class="learning-stage stage-blue reveal-stage">
+            <div class="stage-track">
+              <span class="stage-node">02</span>
+              <span class="stage-line"></span>
+            </div>
+
+            <div class="stage-card">
+              <div class="stage-card-top">
+                <span class="stage-level">EXPLORATION LEVEL</span>
+                <span class="stage-age">AGE 11–12</span>
+              </div>
+
+              <h3>Young Engineers</h3>
+              <p class="stage-tagline">Where science meets logic.</p>
+
+              <p class="stage-description">
+                Move beyond basic discovery and connect components into
+                functional systems. Explore sensor data, simple automation,
+                circuit construction and structured problem-solving.
+              </p>
+
+              <div class="stage-topics">
+                <span>Electronic circuits</span>
+                <span>Sensor behaviour</span>
+                <span>Microcontroller concepts</span>
+                <span>Automation</span>
+                <span>Logic & troubleshooting</span>
+                <span>Practical builds</span>
+              </div>
+
+              <div class="stage-outcome">
+                <span class="outcome-symbol">⌘</span>
+                <div>
+                  <strong>The learning goal</strong>
+                  <p>Develop analytical thinking and start turning scientific ideas into working builds.</p>
+                </div>
+              </div>
+
+              <div class="stage-card-footer">
+                <span class="handbook-mark">AISTEMiQ / HANDBOOK 02</span>
+                <a href="#handbooks" class="text-link">Explore handbook <span>↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- STAGE 3 -->
+          <article class="learning-stage stage-purple reveal-stage">
+            <div class="stage-track">
+              <span class="stage-node">03</span>
+              <span class="stage-line"></span>
+            </div>
+
+            <div class="stage-card">
+              <div class="stage-card-top">
+                <span class="stage-level">FOUNDATION TO PRE-ENGINEERING</span>
+                <span class="stage-age">AGE 13–14</span>
+              </div>
+
+              <h3>Senior Young Engineers</h3>
+              <p class="stage-tagline">From experimentation to engineering thinking.</p>
+
+              <p class="stage-description">
+                Explore embedded electronics, robotics fundamentals,
+                sensor calibration, programming logic and early AI concepts.
+                Learn to plan a build, connect subsystems and troubleshoot methodically.
+              </p>
+
+              <div class="stage-topics">
+                <span>Embedded electronics</span>
+                <span>Arduino foundations</span>
+                <span>Robotics fundamentals</span>
+                <span>Sensor calibration</span>
+                <span>System logic</span>
+                <span>Applied technology</span>
+              </div>
+
+              <div class="stage-outcome">
+                <span class="outcome-symbol">◇</span>
+                <div>
+                  <strong>The learning goal</strong>
+                  <p>Strengthen design discipline, technical reasoning and intermediate project skills.</p>
+                </div>
+              </div>
+
+              <div class="stage-card-footer">
+                <span class="handbook-mark">AISTEMiQ / HANDBOOK 03</span>
+                <a href="#handbooks" class="text-link">Explore handbook <span>↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- STAGE 4 -->
+          <article class="learning-stage stage-gold reveal-stage">
+            <div class="stage-track">
+              <span class="stage-node">04</span>
+              <span class="stage-line"></span>
+            </div>
+
+            <div class="stage-card">
+              <div class="stage-card-top">
+                <span class="stage-level">PRE-ENGINEERING LEVEL</span>
+                <span class="stage-age">AGE 15–17</span>
+              </div>
+
+              <h3>Advanced Engineers</h3>
+              <p class="stage-tagline">Design intelligent systems. Build real technology.</p>
+
+              <p class="stage-description">
+                Explore more advanced electronics, robotics, Python foundations,
+                AI concepts, IoT architecture and engineering problem-solving.
+                Work toward designing, testing and improving connected systems.
+              </p>
+
+              <div class="stage-topics">
+                <span>Advanced electronics</span>
+                <span>Arduino & Python</span>
+                <span>Robotics systems</span>
+                <span>AI concepts</span>
+                <span>IoT architecture</span>
+                <span>Engineering projects</span>
+              </div>
+
+              <div class="stage-outcome">
+                <span class="outcome-symbol">✳</span>
+                <div>
+                  <strong>The learning goal</strong>
+                  <p>Develop pre-engineering confidence through systems thinking and practical technology challenges.</p>
+                </div>
+              </div>
+
+              <div class="stage-card-footer">
+                <span class="handbook-mark">AISTEMiQ / HANDBOOK 04</span>
+                <a href="#handbooks" class="text-link">Explore handbook <span>↗</span></a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="map-finish">
+          <span class="finish-orb">AQ</span>
+          <div>
+            <strong>THE JOURNEY CONTINUES</strong>
+            <p>Choose a coding specialisation and keep building.</p>
+          </div>
+          <a href="#coding-pathways" class="button button-secondary">Explore coding ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CODING PATHWAYS -->
+    <section class="coding-section section-pad" id="coding-pathways">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">CODING FOUNDATION & SPECIALISATIONS</p>
+            <h2>From first program to <span class="gradient-text">real-world builds.</span></h2>
+          </div>
+          <p class="section-intro">
+            Explore programming and technical pathways that connect
+            logical thinking with software, hardware and digital security.
+          </p>
+        </div>
+
+        <div class="coding-pathway-grid">
+
+          <article class="coding-card">
+            <div class="coding-card-top">
+              <span class="coding-icon icon-c">C</span>
+              <span class="coding-index">TRACK / 01</span>
+            </div>
+            <h3>C Programming</h3>
+            <p>Start with variables, conditions, loops, functions and structured problem-solving.</p>
+            <div class="coding-tags"><span>Logic</span><span>Algorithms</span><span>Systems basics</span></div>
+            <a href="#handbooks" class="text-link">Mastering C <span>↗</span></a>
+          </article>
+
+          <article class="coding-card">
+            <div class="coding-card-top">
+              <span class="coding-icon icon-cpp">C++</span>
+              <span class="coding-index">TRACK / 02</span>
+            </div>
+            <h3>C++ Programming</h3>
+            <p>Progress into structured software development, computational thinking and object-oriented concepts.</p>
+            <div class="coding-tags"><span>OOP</span><span>Problem-solving</span><span>Algorithms</span></div>
+            <a href="#handbooks" class="text-link">Mastering C++ <span>↗</span></a>
+          </article>
+
+          <article class="coding-card">
+            <div class="coding-card-top">
+              <span class="coding-icon icon-python">Py</span>
+              <span class="coding-index">TRACK / 03</span>
+            </div>
+            <h3>Python Programming</h3>
+            <p>Learn programming foundations, data structures, functions and project-oriented coding.</p>
+            <div class="coding-tags"><span>Python</span><span>Projects</span><span>AI foundations</span></div>
+            <a href="#handbooks" class="text-link">The Python Workshop <span>↗</span></a>
+          </article>
+
+          <article class="coding-card">
+            <div class="coding-card-top">
+              <span class="coding-icon icon-arduino">⌘</span>
+              <span class="coding-index">TRACK / 04</span>
+            </div>
+            <h3>Arduino & Embedded Projects</h3>
+            <p>Connect code to physical systems through LEDs, sensors, motors, displays and automation builds.</p>
+            <div class="coding-tags"><span>Electronics</span><span>IoT</span><span>Robotics</span></div>
+            <a href="#handbooks" class="text-link">Arduino Coding Mastery <span>↗</span></a>
+          </article>
+
+          <article class="coding-card">
+            <div class="coding-card-top">
+              <span class="coding-icon icon-web">&lt;/&gt;</span>
+              <span class="coding-index">TRACK / 05</span>
+            </div>
+            <h3>Full-Stack Web Development</h3>
+            <p>Explore how websites and web applications combine interface design, programming and data.</p>
+            <div class="coding-tags"><span>HTML & CSS</span><span>JavaScript</span><span>Web apps</span></div>
+            <a href="contact.html" class="text-link">Enquire about this track <span>↗</span></a>
+          </article>
+
+          <article class="coding-card">
+            <div class="coding-card-top">
+              <span class="coding-icon icon-security">⌑</span>
+              <span class="coding-index">TRACK / 06</span>
+            </div>
+            <h3>Cybersecurity & Ethical Hacking</h3>
+            <p>Explore secure programming, digital defence, network concepts and responsible security practice.</p>
+            <div class="coding-tags"><span>Digital safety</span><span>Secure code</span><span>Ethics</span></div>
+            <a href="#handbooks" class="text-link">Explore cybersecurity book <span>↗</span></a>
+          </article>
+
+          <article class="coding-card coding-card-wide">
+            <div class="coding-card-top">
+              <span class="coding-icon icon-ai">✳</span>
+              <span class="coding-index">SPECIALISATION / 07</span>
+            </div>
+            <h3>Generative AI & AI Tool Building</h3>
+            <p>
+              Move beyond simply using AI tools. Explore prompt engineering,
+              AI system design, automation workflows and the foundations
+              of building practical AI-powered applications.
+            </p>
+            <div class="coding-tags"><span>Prompt engineering</span><span>Automation</span><span>AI products</span></div>
+            <a href="#handbooks" class="text-link">Generative AI Master Course <span>↗</span></a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HANDBOOK COLLECTION -->
+    <section class="handbook-section section-pad" id="handbooks">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THE AISTEMiQ BOOKSHELF</p>
+            <h2>Resources for every <span class="gradient-text">stage of discovery.</span></h2>
+          </div>
+          <p class="section-intro">
+            Explore the handbook collection and coding resources.
+            Digital purchasing links can be added when your e-book store is ready.
+          </p>
+        </div>
+
+        <div class="handbook-feature">
+          <div class="handbook-feature-image">
+            <img
+              src="assets/images/curriculum-collection.png"
+              alt="AISTEMiQ STEM and coding education book collection"
+              loading="lazy"
+            >
+          </div>
+          <div class="handbook-feature-copy">
+            <span class="card-kicker">THE COLLECTION</span>
+            <h3>One learning universe.<br>Multiple ways to build.</h3>
+            <p>
+              Discover age-based engineering handbooks alongside focused
+              learning resources in programming, electronics, AI and
+              cybersecurity.
+            </p>
+            <a href="#book-catalogue" class="button button-primary">Browse the books <span>↓</span></a>
+          </div>
+        </div>
+
+        <div class="book-catalogue" id="book-catalogue">
+
+          <article class="book-card">
+            <div class="book-cover cover-junior">
+              <span>AISTEMiQ</span>
+              <strong>JUNIOR<br>ENGINEERS<br>HANDBOOK</strong>
+              <small>AGE 8–10</small>
+              <i>✳</i>
+            </div>
+            <div class="book-info">
+              <span class="book-type">AGE-WISE CURRICULUM</span>
+              <h3>Junior Engineers Handbook</h3>
+              <p>Circuits, sensors, science and guided experimentation.</p>
+              <a href="contact.html" class="text-link">Enquire about this book <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <div class="book-cover cover-explorer">
+              <span>AISTEMiQ</span>
+              <strong>JUNIOR<br>ENGINEERS<br>HANDBOOK</strong>
+              <small>AGE 11–12</small>
+              <i>⌘</i>
+            </div>
+            <div class="book-info">
+              <span class="book-type">AGE-WISE CURRICULUM</span>
+              <h3>Young Engineers Handbook</h3>
+              <p>Logic, electronic systems, sensors and automation.</p>
+              <a href="contact.html" class="text-link">Enquire about this book <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <div class="book-cover cover-senior">
+              <span>AISTEMiQ</span>
+              <strong>SENIOR YOUNG<br>ENGINEERS</strong>
+              <small>AGE 13–14</small>
+              <i>◇</i>
+            </div>
+            <div class="book-info">
+              <span class="book-type">AGE-WISE CURRICULUM</span>
+              <h3>Senior Young Engineers Handbook</h3>
+              <p>Embedded electronics, robotics and engineering thinking.</p>
+              <a href="contact.html" class="text-link">Enquire about this book <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <div class="book-cover cover-advanced">
+              <span>AISTEMiQ</span>
+              <strong>ADVANCED<br>ENGINEERS<br>HANDBOOK</strong>
+              <small>AGE 15–17</small>
+              <i>✳</i>
+            </div>
+            <div class="book-info">
+              <span class="book-type">PRE-ENGINEERING</span>
+              <h3>Advanced Engineers Handbook</h3>
+              <p>Advanced STEM, Arduino, Python, AI and IoT concepts.</p>
+              <a href="contact.html" class="text-link">Enquire about this book <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <div class="book-cover cover-c">
+              <span>AISTEMiQ</span>
+              <strong>MASTERING<br><b>C</b></strong>
+              <small>SYSTEM PROGRAMMING FOUNDATIONS</small>
+              <i>C</i>
+            </div>
+            <div class="book-info">
+              <span class="book-type">CODING FOUNDATION</span>
+              <h3>Mastering C</h3>
+              <p>Structured programming, logic and computational problem-solving.</p>
+              <a href="contact.html" class="text-link">Enquire about this book <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <div class="book-cover cover-cpp">
+              <span>AISTEMiQ</span>
+              <strong>MASTERING<br><b>C++</b></strong>
+              <small>A COMPREHENSIVE JOURNEY</small>
+              <i>C++</i>
+            </div>
+            <div class="book-info">
+              <span class="book-type">CODING FOUNDATION</span>
+              <h3>Mastering C++</h3>
+              <p>Programming, object-oriented concepts and problem-solving.</p>
+              <a href="contact.html" class="text-link">Enquire about this book <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <div class="book-cover cover-python">
+              <span>AISTEMiQ</span>
+              <strong>THE<br>PYTHON<br>WORKSHOP</strong>
+              <small>LEARN BY BUILDING</small>
+              <i>Py</i>
+            </div>
+            <div class="book-info">
+              <span class="book-type">CODING WORKSHOP</span>
+              <h3>The Python Workshop</h3>
+              <p>Python fundamentals, exercises and practical programming.</p>
+              <a href="contact.html" class="text-link">Enquire about this book <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <div class="book-cover cover-arduino">
+              <span>AISTEMiQ</span>
+              <strong>ARDUINO<br>CODING<br>MASTERY</strong>
+              <small>BEGINNER TO ADVANCED PROJECTS</small>
+              <i>⌘</i>
+            </div>
+            <div class="book-info">
+              <span class="book-type">HARDWARE & CODING</span>
+              <h3>Arduino Coding Mastery</h3>
+              <p>Sensor projects, microcontrollers, robotics and automation.</p>
+              <a href="contact.html" class="text-link">Enquire about this book <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <div class="book-cover cover-ai">
+              <span>AISTEMiQ</span>
+              <strong>GENERATIVE<br>AI MASTER<br>COURSE</strong>
+              <small>CREATE YOUR OWN AI TOOLS</small>
+              <i>✳</i>
+            </div>
+            <div class="book-info">
+              <span class="book-type">AI SPECIALISATION</span>
+              <h3>Generative AI Master Course</h3>
+              <p>Prompting, AI systems, automation and AI product building.</p>
+              <a href="contact.html" class="text-link">Enquire about this book <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <div class="book-cover cover-cyber">
+              <span>AISTEMiQ</span>
+              <strong>CYBER<br>SECURITY</strong>
+              <small>ETHICAL HACKING BOOTCAMP</small>
+              <i>⌑</i>
+            </div>
+            <div class="book-info">
+              <span class="book-type">CYBERSECURITY</span>
+              <h3>Cyber Security & Ethical Hacking Bootcamp</h3>
+              <p>Secure programming, digital defence and ethical security practice.</p>
+              <a href="contact.html" class="text-link">Enquire about this book <span>↗</span></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FUTURE DIGITAL STORE -->
+    <section class="digital-store-section section-pad" id="digital-store">
+      <div class="container">
+        <div class="digital-store-panel">
+          <div class="store-glow"></div>
+
+          <div class="store-copy">
+            <p class="eyebrow"><span class="mini-dot purple"></span> COMING IN A FUTURE RELEASE</p>
+            <h2>Your learning library.<br><span class="gradient-text">One digital destination.</span></h2>
+            <p>
+              We're planning a digital bookshelf for AISTEMiQ e-books,
+              downloadable learning resources and selected publications.
+              Amazon book listings may also be linked here when the
+              official product pages are available.
+            </p>
+
+            <div class="store-feature-list">
+              <span><i>✓</i> Digital e-book catalogue</span>
+              <span><i>✓</i> Product previews and book details</span>
+              <span><i>✓</i> Future Amazon listing links</span>
+              <span><i>✓</i> Direct product enquiries</span>
+            </div>
+
+            <a class="button button-primary" href="contact.html">
+              Ask about AISTEMiQ books <span>↗</span>
+            </a>
+          </div>
+
+          <div class="digital-store-visual" aria-label="Illustration of a future digital bookshelf">
+            <div class="digital-orbit orbit-store-one"></div>
+            <div class="digital-orbit orbit-store-two"></div>
+            <div class="digital-book book-one"><span>AI</span><small>GENERATIVE AI</small></div>
+            <div class="digital-book book-two"><span>{ }</span><small>CODING</small></div>
+            <div class="digital-book book-three"><span>⌘</span><small>ROBOTICS</small></div>
+            <div class="store-platform"></div>
+            <div class="store-coming-soon">DIGITAL LIBRARY / COMING SOON</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="curriculum-cta section-pad">
+      <div class="container cta-inner">
+        <div>
+          <p class="eyebrow">FOR PARENTS, EDUCATORS & SCHOOLS</p>
+          <h2>Let's build a pathway for <span class="gradient-text">your learners.</span></h2>
+          <p>Discuss curriculum access, learning resources, school programs or AI lab requirements.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="button button-primary" href="contact.html">Start a conversation <span>↗</span></a>
+          <a class="button button-secondary" href="index.html">Back to homepage</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+       
+<a class="brand brand-image" href="index.html" aria-label="AISTEMiQ homepage">
+  <img src="assets/aistemiq-logo.png" alt="AISTEMiQ — Future Skills, Built Here">
+</a>
+
+        <p>Imagine. Experiment. Engineer the Future.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Explore</h4>
+        <a href="programs.html">Programs</a>
+        <a href="curriculum.html">Curriculum</a>
+        <a href="store.html">STEM store</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>For schools</h4>
+        <a href="labs.html">AI labs</a>
+        <a href="partners.html">Partnerships</a>
+        <a href="contact.html">Teacher training</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Information</h4>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of use</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="currentYear"></span> AISTEMiQ. All rights reserved.</p>
+      <p>Built for curious minds <span class="footer-heart">✳</span></p>
+    </div>
+  </footer>
+
+</body>
+</html>

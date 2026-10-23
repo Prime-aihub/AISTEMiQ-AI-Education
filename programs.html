@@ -1,0 +1,767 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080611">
+  <meta name="description" content="Explore AISTEMiQ programs in STEM, robotics, coding, AI education, curriculum partnerships and AI & STEM lab setup. Request a customised quote.">
+  <title>Programs & Partnerships | AISTEMiQ</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    .programs-page {
+      --p-bg: #080611;
+      --p-card: rgba(22, 15, 39, .82);
+      --p-border: rgba(139, 92, 246, .25);
+      --p-cyan: #65edff;
+      --p-purple: #a77bff;
+      color: #edf1ff;
+    }
+
+    .programs-page * { box-sizing: border-box; }
+
+    .programs-page .program-hero {
+      padding: 86px 20px 66px;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at 20% 15%, rgba(139,92,246,.18), transparent 45%),
+        radial-gradient(ellipse at 85% 50%, rgba(73,240,255,.09), transparent 40%);
+    }
+
+    .programs-page .eyebrow {
+      display: inline-block;
+      color: var(--p-cyan);
+      border: 1px solid rgba(101,237,255,.25);
+      background: rgba(101,237,255,.06);
+      border-radius: 99px;
+      padding: 8px 14px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+
+    .programs-page .program-hero h1 {
+      max-width: 900px;
+      margin: 22px auto 16px;
+      font-size: clamp(36px, 6vw, 64px);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+    }
+
+    .programs-page .gradient-text {
+      background: linear-gradient(90deg, #a77bff, #65edff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .programs-page .hero-description {
+      max-width: 720px;
+      margin: 0 auto;
+      color: #b8bfd2;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .programs-page .program-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .programs-page .quote-btn,
+    .programs-page .outline-btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 13px 20px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .programs-page .quote-btn {
+      border: 0;
+      color: #080611;
+      background: linear-gradient(100deg, #65edff, #a77bff);
+      box-shadow: 0 8px 30px rgba(101,237,255,.12);
+    }
+
+    .programs-page .outline-btn {
+      border: 1px solid var(--p-border);
+      background: rgba(255,255,255,.025);
+      color: #edf1ff;
+    }
+
+    .programs-page .quote-btn:hover,
+    .programs-page .outline-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(139,92,246,.2);
+    }
+
+    .programs-page .program-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 48px 20px;
+    }
+
+    .programs-page .section-heading {
+      margin-bottom: 28px;
+    }
+
+    .programs-page .section-heading h2 {
+      margin: 0 0 10px;
+      font-size: clamp(27px, 4vw, 38px);
+    }
+
+    .programs-page .section-heading p {
+      max-width: 760px;
+      color: #aeb6ca;
+      line-height: 1.75;
+    }
+
+    .programs-page .program-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .programs-page .program-card {
+      position: relative;
+      overflow: hidden;
+      padding: 26px;
+      border: 1px solid var(--p-border);
+      border-radius: 20px;
+      background: linear-gradient(145deg, rgba(31,20,53,.86), rgba(12,10,23,.95));
+      box-shadow: 0 14px 40px rgba(0,0,0,.15);
+    }
+
+    .programs-page .program-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #a77bff, #65edff);
+    }
+
+    .programs-page .program-icon {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 18px;
+      border-radius: 14px;
+      background: rgba(139,92,246,.15);
+      border: 1px solid rgba(139,92,246,.3);
+      font-size: 23px;
+    }
+
+    .programs-page .program-card h3 {
+      margin: 0 0 12px;
+      font-size: 23px;
+      line-height: 1.3;
+    }
+
+    .programs-page .program-card p {
+      color: #b8bfd2;
+      line-height: 1.75;
+      font-size: 14px;
+    }
+
+    .programs-page .program-card h4 {
+      margin: 20px 0 8px;
+      color: var(--p-cyan);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+    }
+
+    .programs-page .program-card ul {
+      padding-left: 20px;
+      color: #d9deed;
+      line-height: 1.9;
+      font-size: 14px;
+    }
+
+    .programs-page .program-card .quote-btn {
+      margin-top: 12px;
+    }
+
+    .programs-page .learning-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .programs-page .learning-item {
+      padding: 20px;
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 15px;
+      background: rgba(255,255,255,.025);
+    }
+
+    .programs-page .learning-item h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+
+    .programs-page .learning-item p {
+      margin: 0;
+      color: #adb6ca;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .programs-page .journey {
+      border: 1px solid var(--p-border);
+      border-radius: 20px;
+      padding: 28px;
+      background: linear-gradient(120deg, rgba(139,92,246,.12), rgba(73,240,255,.04));
+    }
+
+    .programs-page .journey-steps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .programs-page .journey-step {
+      padding: 18px;
+      border-radius: 12px;
+      background: rgba(8,6,17,.7);
+      border: 1px solid rgba(255,255,255,.07);
+    }
+
+    .programs-page .journey-step strong {
+      display: block;
+      color: var(--p-cyan);
+      margin-bottom: 8px;
+    }
+
+    .programs-page .journey-step span {
+      color: #c3cada;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .programs-page .quote-section {
+      max-width: 1000px;
+      margin: 30px auto 70px;
+      padding: 0 20px;
+      scroll-margin-top: 100px;
+    }
+
+    .programs-page .quote-panel {
+      padding: clamp(22px, 4vw, 42px);
+      border-radius: 22px;
+      border: 1px solid rgba(101,237,255,.22);
+      background:
+        radial-gradient(ellipse at top right, rgba(139,92,246,.16), transparent 45%),
+        #100b1c;
+    }
+
+    .programs-page .quote-panel h2 {
+      margin: 0 0 10px;
+      font-size: clamp(26px, 4vw, 36px);
+    }
+
+    .programs-page .quote-panel > p {
+      color: #b8bfd2;
+      line-height: 1.75;
+    }
+
+    .programs-page .quote-form {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 17px;
+      margin-top: 25px;
+    }
+
+    .programs-page .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .programs-page .form-field.full {
+      grid-column: 1 / -1;
+    }
+
+    .programs-page .form-field label {
+      color: #dfe6f2;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .programs-page .form-field input,
+    .programs-page .form-field select,
+    .programs-page .form-field textarea {
+      width: 100%;
+      min-width: 0;
+      padding: 13px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: #0b0814;
+      color: #edf1ff;
+      font: inherit;
+      font-size: 14px;
+    }
+
+    .programs-page .form-field input:focus,
+    .programs-page .form-field select:focus,
+    .programs-page .form-field textarea:focus {
+      outline: 2px solid rgba(101,237,255,.55);
+      border-color: #65edff;
+    }
+
+    .programs-page .form-field textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .programs-page .quote-form .quote-btn {
+      justify-self: start;
+      min-height: 46px;
+    }
+
+    .programs-page .privacy-note {
+      color: #9099af;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .programs-page .program-footer {
+      padding: 25px 20px;
+      border-top: 1px solid rgba(255,255,255,.07);
+      text-align: center;
+      color: #9ba4b8;
+      font-size: 13px;
+    }
+
+    @media (max-width: 760px) {
+      .programs-page .program-grid,
+      .programs-page .learning-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .programs-page .journey-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .programs-page .program-hero {
+        padding-top: 60px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .programs-page .quote-form {
+        grid-template-columns: 1fr;
+      }
+
+      .programs-page .form-field.full {
+        grid-column: auto;
+      }
+
+      .programs-page .journey-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .programs-page .program-card {
+        padding: 21px;
+      }
+    }
+  </style>
+</head>
+
+<body class="programs-page">
+
+  <!-- HEADER -->
+  <header class="main-nav">
+    <div class="nav-inner">
+      <a class="brand brand-image" href="index.html" aria-label="AISTEMiQ Home">
+        <img src="assets/aistemiq-logo.png"
+             alt="AISTEMiQ — Empowering the future innovators">
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="curriculum.html">Curriculum</a></li>
+          <li><a href="programs.html" aria-current="page">Programs</a></li>
+          <li><a href="index.html#services">Services</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="program-hero">
+      <span class="eyebrow">Programs · Partnerships · Innovation</span>
+
+      <h1>
+        Build the Next Generation of
+        <span class="gradient-text">Technology Creators</span>
+      </h1>
+
+      <p class="hero-description">
+        From practical student programs to complete AI and STEM laboratories,
+        AISTEMiQ helps schools, educators and entrepreneurs create meaningful
+        technology-learning experiences.
+      </p>
+
+      <div class="program-actions">
+        <a class="quote-btn" href="#request-quote">Request a Quote ↗</a>
+        <a class="outline-btn" href="#program-options">Explore Programs ↓</a>
+      </div>
+    </section>
+
+    <!-- PROGRAM OPTIONS -->
+    <section class="program-section" id="program-options">
+      <div class="section-heading">
+        <h2>Find Your <span class="gradient-text">AISTEMiQ Program</span></h2>
+        <p>
+          Choose a learning or partnership model based on your students,
+          institution, existing facilities and goals. Pricing is provided
+          after understanding your requirements.
+        </p>
+      </div>
+
+      <div class="program-grid">
+        <article class="program-card">
+          <div class="program-icon" aria-hidden="true">🚀</div>
+          <h3>01. Weekend Technology Programs</h3>
+          <p>
+            Practical technology-learning experiences for school students,
+            beginners and weekend learners.
+          </p>
+
+          <h4>Possible learning areas</h4>
+          <ul>
+            <li>STEM and electronics</li>
+            <li>Robotics and Arduino</li>
+            <li>Coding, Python and AI fundamentals</li>
+            <li>Hands-on projects and experimentation</li>
+          </ul>
+
+          <h4>Suitable for</h4>
+          <p>Schools, student groups, workshops and supplementary learning programs.</p>
+
+          <button class="quote-btn choose-program" type="button"
+                  data-program="Weekend Technology Programs">
+            Request a Quote ↗
+          </button>
+        </article>
+
+        <article class="program-card">
+          <div class="program-icon" aria-hidden="true">📚</div>
+          <h3>02. Curriculum Partnership</h3>
+          <p>
+            Bring structured AISTEMiQ learning materials and practical
+            project frameworks into your existing educational setup.
+          </p>
+
+          <h4>Partnership can include</h4>
+          <ul>
+            <li>AISTEMiQ curriculum and learning materials</li>
+            <li>Age-appropriate STEM learning resources</li>
+            <li>Practical project frameworks</li>
+            <li>Teaching resources and agreed branding options</li>
+          </ul>
+
+          <h4>Suitable for</h4>
+          <p>Schools, coaching centres and institutions with teachers or existing infrastructure.</p>
+
+          <button class="quote-btn choose-program" type="button"
+                  data-program="Curriculum Partnership">
+            Request a Quote ↗
+          </button>
+        </article>
+
+        <article class="program-card">
+          <div class="program-icon" aria-hidden="true">🤖</div>
+          <h3>03. AI & STEM Lab Setup</h3>
+          <p>
+            Plan a hands-on technology lab designed around your institution's
+            available space, student requirements and learning objectives.
+          </p>
+
+          <h4>Potential lab components</h4>
+          <ul>
+            <li>Robotics components and electronics</li>
+            <li>Sensors, microcontrollers and project equipment</li>
+            <li>Computers and student workstations</li>
+            <li>Curriculum, learning resources and lab branding</li>
+          </ul>
+
+          <h4>Suitable for</h4>
+          <p>Schools, colleges, training centres and educational entrepreneurs.</p>
+
+          <button class="quote-btn choose-program" type="button"
+                  data-program="AI and STEM Lab Setup">
+            Request a Quote ↗
+          </button>
+        </article>
+
+        <article class="program-card">
+          <div class="program-icon" aria-hidden="true">🏢</div>
+          <h3>04. Education IT Institute</h3>
+          <p>
+            Explore a strategic partnership to establish a local technology
+            education centre with multiple learning pathways.
+          </p>
+
+          <h4>Potential academies</h4>
+          <ul>
+            <li>AI, generative AI tools and automation</li>
+            <li>C, C++, Python and full-stack development</li>
+            <li>Robotics, IoT and embedded systems</li>
+            <li>Cybersecurity and related technology topics</li>
+          </ul>
+
+          <h4>Suitable for</h4>
+          <p>Education entrepreneurs and partners planning a long-term technology institute.</p>
+
+          <button class="quote-btn choose-program" type="button"
+                  data-program="Education IT Institute Partnership">
+            Request a Quote ↗
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <!-- LEARNING AREAS -->
+    <section class="program-section">
+      <div class="section-heading">
+        <h2>Explore Our <span class="gradient-text">Learning Areas</span></h2>
+        <p>
+          Programs can be tailored to student age, learning level,
+          available facilities and institutional objectives.
+        </p>
+      </div>
+
+      <div class="learning-grid">
+        <article class="learning-item">
+          <h3>⚡ STEM & Electronics</h3>
+          <p>Circuits, sensors, energy, science experiments and automation.</p>
+        </article>
+
+        <article class="learning-item">
+          <h3>🤖 Robotics & Embedded Systems</h3>
+          <p>Robotics, Arduino, microcontrollers, connected devices and IoT.</p>
+        </article>
+
+        <article class="learning-item">
+          <h3>💻 Coding & Development</h3>
+          <p>C, C++, Python, programming fundamentals and full-stack development.</p>
+        </article>
+
+        <article class="learning-item">
+          <h3>🧠 Artificial Intelligence</h3>
+          <p>AI fundamentals, generative AI concepts, tools and automation.</p>
+        </article>
+
+        <article class="learning-item">
+          <h3>🔐 Cybersecurity</h3>
+          <p>Cybersecurity awareness, security concepts and IoT security foundations.</p>
+        </article>
+
+        <article class="learning-item">
+          <h3>🛠️ Project-Based Learning</h3>
+          <p>Practical exercises that encourage experimentation and engineering thinking.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- LEARNING JOURNEY -->
+    <section class="program-section">
+      <div class="journey">
+        <div class="section-heading">
+          <h2>A Progressive <span class="gradient-text">Learning Journey</span></h2>
+          <p>
+            The AISTEMiQ brochure outlines an age-wise progression from
+            foundational STEM exploration to advanced technology.
+          </p>
+        </div>
+
+        <div class="journey-steps">
+          <div class="journey-step">
+            <strong>Ages 8–10</strong>
+            <span>STEM, circuits, sensors and science.</span>
+          </div>
+
+          <div class="journey-step">
+            <strong>Ages 11–12</strong>
+            <span>Electronics, sensors and automation.</span>
+          </div>
+
+          <div class="journey-step">
+            <strong>Ages 13–14</strong>
+            <span>Robotics, embedded systems and programming.</span>
+          </div>
+
+          <div class="journey-step">
+            <strong>Ages 15–17</strong>
+            <span>Python, AI, robotics, IoT and advanced technology.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE FORM -->
+    <section class="quote-section" id="request-quote">
+      <div class="quote-panel">
+        <span class="eyebrow">Let's Build Together</span>
+        <h2>Request a <span class="gradient-text">Custom Quote</span></h2>
+        <p>
+          Tell us about your requirements. We'll use the information to prepare
+          an enquiry on WhatsApp so we can discuss the right program, scope
+          and pricing for your needs.
+        </p>
+
+        <form class="quote-form" id="program-quote-form">
+          <div class="form-field">
+            <label for="quote-name">Your name *</label>
+            <input id="quote-name" name="name" required
+                   autocomplete="name" placeholder="Enter your name">
+          </div>
+
+          <div class="form-field">
+            <label for="quote-phone">Your contact number *</label>
+            <input id="quote-phone" name="phone" type="tel" required
+                   autocomplete="tel" placeholder="Your phone number">
+          </div>
+
+          <div class="form-field">
+            <label for="quote-institution">School / Organisation</label>
+            <input id="quote-institution" name="institution"
+                   placeholder="Institution or organisation name">
+          </div>
+
+          <div class="form-field">
+            <label for="quote-program">Program of interest *</label>
+            <select id="quote-program" name="program" required>
+              <option value="">Select a program</option>
+              <option>Weekend Technology Programs</option>
+              <option>Curriculum Partnership</option>
+              <option>AI and STEM Lab Setup</option>
+              <option>Education IT Institute Partnership</option>
+              <option>Student Coding / AI Programs</option>
+              <option>Other / Need Guidance</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="quote-age">Student age group</label>
+            <select id="quote-age" name="age">
+              <option value="">Select age group</option>
+              <option>8–10 years</option>
+              <option>11–12 years</option>
+              <option>13–14 years</option>
+              <option>15–17 years</option>
+              <option>Mixed age groups / Adults</option>
+              <option>Not applicable yet</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="quote-students">Expected students / lab users</label>
+            <select id="quote-students" name="students">
+              <option value="">Select approximate number</option>
+              <option>1–20</option>
+              <option>21–50</option>
+              <option>51–100</option>
+              <option>101–250</option>
+              <option>250+</option>
+              <option>Not decided</option>
+            </select>
+          </div>
+
+          <div class="form-field full">
+            <label for="quote-requirements">Tell us about your requirements</label>
+            <textarea id="quote-requirements" name="requirements"
+                      placeholder="Existing facilities, subjects, location, timeline or other requirements"></textarea>
+          </div>
+
+          <div class="form-field full">
+            <button class="quote-btn" type="submit">
+              Send Enquiry on WhatsApp ↗
+            </button>
+            <p class="privacy-note">
+              This form opens WhatsApp with your enquiry details for you to review
+              and send. It does not submit the information to a website database.
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="program-footer">
+    © <span id="program-year"></span> AISTEMiQ · Design Intelligent Systems.
+    Build Real Technology. Lead the Future.
+  </footer>
+
+  <script>
+    const quoteForm = document.getElementById("program-quote-form");
+    const programSelect = document.getElementById("quote-program");
+
+    document.getElementById("program-year").textContent =
+      new Date().getFullYear();
+
+    document.querySelectorAll(".choose-program").forEach((button) => {
+      button.addEventListener("click", () => {
+        programSelect.value = button.dataset.program;
+        document.getElementById("request-quote").scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+        setTimeout(() => {
+          document.getElementById("quote-name").focus({
+            preventScroll: true
+          });
+        }, 350);
+      });
+    });
+
+    quoteForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      if (!quoteForm.reportValidity()) return;
+
+      const data = new FormData(quoteForm);
+
+      const message = [
+        "Hello AISTEMiQ! I would like to request a customised program quote.",
+        "",
+        "Name: " + (data.get("name") || ""),
+        "Contact Number: " + (data.get("phone") || ""),
+        "School / Organisation: " + (data.get("institution") || "Not provided"),
+        "Program: " + (data.get("program") || ""),
+        "Student Age Group: " + (data.get("age") || "Not specified"),
+        "Expected Students / Lab Users: " + (data.get("students") || "Not specified"),
+        "Requirements: " + (data.get("requirements") || "Please contact me to discuss."),
+        "",
+        "Please contact me to discuss the scope and pricing. Thank you."
+      ].join("\n");
+
+      const whatsappURL =
+        "https://wa.me/919004130508?text=" + encodeURIComponent(message);
+
+      window.open(whatsappURL, "_blank", "noopener,noreferrer");
+    });
+  </script>
+
+</body>
+</html>
