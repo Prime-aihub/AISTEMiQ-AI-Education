@@ -751,6 +751,7 @@ img {
   margin-bottom: 5px;
 }
 
+
 /* Ecosystem cards */
 
 .ecosystem-grid {
@@ -763,87 +764,79 @@ img {
   overflow: hidden;
   border: 1px solid var(--border);
   border-radius: 16px;
-  background: linear-gradient(145deg, rgba(18, 29, 54, 0.92), rgba(11, 17, 33, 0.95));
-  transition: border-color 0.25s ease, transform 0.25s ease;
+  background: linear-gradient(
+    145deg,
+    rgba(18, 29, 54, 0.92),
+    rgba(11, 17, 33, 0.95)
+  );
+  transition: border-color 0.25s ease, transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .ecosystem-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(89, 232, 255, 0.4);
+  border-color: rgba(89, 232, 255, 0.55);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2),
+    0 0 22px rgba(89, 232, 255, 0.07);
 }
 
+/* Image container */
 .tile-visual {
   position: relative;
-  display: grid;
-  height: 150px;
-  place-items: center;
+  height: 180px;
   overflow: hidden;
-  background: radial-gradient(circle at 50% 60%, rgba(78, 107, 255, 0.19), transparent 60%), #0c152b;
+  background: #0c152b;
+  isolation: isolate;
 }
 
-.tile-visual::before,
+.tile-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+/* Dark gradient overlay */
 .tile-visual::after {
-  position: absolute;
-  width: 140px;
-  height: 140px;
-  border: 1px solid rgba(89, 232, 255, 0.14);
-  border-radius: 50%;
   content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(7, 11, 24, 0.12) 0%,
+    rgba(7, 11, 24, 0.02) 42%,
+    rgba(7, 11, 24, 0.55) 100%
+  );
+  pointer-events: none;
 }
 
-.tile-visual::after {
-  width: 190px;
-  height: 190px;
-  border-style: dashed;
-  border-color: rgba(177, 138, 255, 0.17);
+/* Neon hover effect */
+.ecosystem-card:hover .tile-visual img {
+  transform: scale(1.06);
+  filter: saturate(1.12) brightness(1.08);
 }
 
+/* Number badge */
 .tile-visual > span {
   position: absolute;
-  top: 13px;
-  left: 15px;
-  color: #7c8dab;
+  top: 12px;
+  left: 13px;
+  z-index: 2;
+  padding: 5px 8px;
+  border: 1px solid rgba(89, 232, 255, 0.4);
+  border-radius: 6px;
+  background: rgba(7, 11, 24, 0.82);
+  color: #a8f5ff;
   font-size: 0.66rem;
+  font-weight: 700;
   letter-spacing: 0.1em;
+  backdrop-filter: blur(8px);
 }
 
-.tile-visual b {
-  z-index: 1;
-  color: var(--cyan);
-  font-family: var(--font-heading);
-  font-size: 2.6rem;
-  text-shadow: 0 0 28px rgba(89, 232, 255, 0.24);
-}
-
-.tile-curriculum b {
-  font-size: 1.8rem;
-  letter-spacing: 0.12em;
-  line-height: 1.3;
-}
-
-.tile-robotics b {
-  color: var(--purple);
-  font-size: 4rem;
-}
-
-.tile-coding b {
-  font-size: 3.4rem;
-}
-
-.tile-labs b {
-  color: #85a4ff;
-  font-size: 4.3rem;
-}
-
-.tile-teachers b {
-  color: #f5b9ff;
-}
-
-.tile-partners b {
-  color: #9da7ff;
-  font-size: 4rem;
-}
-
+/* Card text */
 .card-content {
   padding: 22px;
 }
@@ -886,6 +879,31 @@ img {
 .text-link:hover span {
   transform: translate(3px, -3px);
 }
+
+/* Mobile image height */
+@media (max-width: 520px) {
+  .tile-visual {
+    height: 190px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .ecosystem-card,
+  .tile-visual img,
+  .text-link span {
+    transition: none;
+  }
+
+  .ecosystem-card:hover {
+    transform: none;
+  }
+
+  .ecosystem-card:hover .tile-visual img {
+    transform: none;
+  }
+}
+
 
 /* Programs */
 
