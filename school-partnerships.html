@@ -1,0 +1,590 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d1b">
+  <title>School & Institutional Partnerships | AISTEMiQ</title>
+  <meta name="description" content="Explore AI lab setups, STEM kits, curriculum, teacher training, white-label educational solutions and school partnerships with AISTEMiQ.">
+
+  <style>
+    :root {
+      --bg: #080d1b;
+      --panel: #101a30;
+      --panel-light: #14213b;
+      --cyan: #59e8ff;
+      --purple: #b18aff;
+      --text: #f4f7ff;
+      --muted: #a6b4d0;
+      --border: rgba(142, 173, 225, .2);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      line-height: 1.65;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1160px, 92%);
+      margin: auto;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      color: var(--cyan);
+      font-weight: 900;
+      font-size: 1.3rem;
+      letter-spacing: .09em;
+    }
+
+    .nav-link {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .hero {
+      padding: 65px 0 35px;
+      text-align: center;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: var(--cyan);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 5vw, 3.8rem);
+      line-height: 1.12;
+      letter-spacing: -.04em;
+      margin: 18px 0;
+    }
+
+    .gradient {
+      background: linear-gradient(90deg, var(--cyan), var(--purple));
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.06rem;
+      max-width: 730px;
+      margin: 0 auto;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
+      gap: 28px;
+      align-items: start;
+      padding: 25px 0 75px;
+    }
+
+    .left-panel, .form-panel {
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: linear-gradient(145deg, #101a30, #0c1325);
+      padding: 27px;
+    }
+
+    h2 { margin: 0 0 12px; font-size: 1.5rem; }
+    h3 { margin: 0 0 7px; font-size: 1rem; }
+
+    .intro, .service p, .note {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .service {
+      display: flex;
+      gap: 14px;
+      padding: 19px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .service:last-of-type { border-bottom: 0; }
+
+    .service-icon {
+      width: 42px;
+      height: 42px;
+      flex: 0 0 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(89,232,255,.25);
+      background: rgba(89,232,255,.08);
+      color: var(--cyan);
+      border-radius: 12px;
+      font-size: 1.15rem;
+    }
+
+    .service p { margin: 0; }
+
+    .benefits {
+      margin-top: 22px;
+      padding: 19px;
+      border: 1px solid rgba(177,138,255,.25);
+      border-radius: 15px;
+      background: rgba(177,138,255,.06);
+    }
+
+    .benefits ul {
+      padding-left: 19px;
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .benefits li { margin: 8px 0; }
+
+    .form-panel { padding: 30px; }
+
+    .form-heading { margin-bottom: 23px; }
+    .form-heading p { color: var(--muted); margin: 0; font-size: .92rem; }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 17px;
+    }
+
+    .field { min-width: 0; }
+    .full { grid-column: 1 / -1; }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      font-size: .84rem;
+      font-weight: 700;
+    }
+
+    input, select, textarea {
+      display: block;
+      width: 100%;
+      padding: 12px 13px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #0a1224;
+      color: var(--text);
+      font: inherit;
+      font-size: .9rem;
+      outline: none;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 3px rgba(89,232,255,.08);
+    }
+
+    input::placeholder, textarea::placeholder { color: #71809d; }
+    select option { background: #101a30; }
+    textarea { resize: vertical; min-height: 100px; }
+
+    .checklist {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .check {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      padding: 10px;
+      background: #0a1224;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--muted);
+      font-size: .82rem;
+    }
+
+    .check input {
+      width: auto;
+      margin-top: 4px;
+      accent-color: var(--cyan);
+    }
+
+    .submit {
+      width: 100%;
+      padding: 14px 18px;
+      margin-top: 20px;
+      border: 0;
+      border-radius: 11px;
+      background: linear-gradient(100deg, var(--cyan), #a2d9ff);
+      color: #07111f;
+      font-weight: 900;
+      font-size: .95rem;
+      cursor: pointer;
+    }
+
+    .submit:hover { filter: brightness(1.07); }
+
+    .privacy {
+      color: var(--muted);
+      font-size: .76rem;
+      margin: 12px 0 0;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 23px 0;
+      color: var(--muted);
+      font-size: .82rem;
+      text-align: center;
+    }
+
+    @media (max-width: 850px) {
+      .layout { grid-template-columns: 1fr; }
+      .hero { padding-top: 45px; }
+    }
+
+    @media (max-width: 520px) {
+      .left-panel, .form-panel { padding: 20px; }
+      .form-grid, .checklist { grid-template-columns: 1fr; }
+      .full { grid-column: auto; }
+      .nav { padding: 17px 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="container nav">
+    <a class="brand" href="index.html">AISTEMiQ</a>
+    <a class="nav-link" href="index.html">← Back to website</a>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">For Schools • Institutions • Education Partners</span>
+      <h1>Build Your Institution's <span class="gradient">Future-Ready Learning Ecosystem</span></h1>
+      <p>
+        Explore practical STEM education, AI and robotics labs, branded learning
+        resources, teacher enablement and flexible partnership models with AISTEMiQ.
+        Tell us about your institution and we will discuss a suitable approach.
+      </p>
+    </section>
+
+    <section class="layout">
+      <aside class="left-panel">
+        <span class="eyebrow">What We Offer</span>
+        <h2>One partner. Multiple possibilities.</h2>
+        <p class="intro">
+          Build a technology-learning program around your institution's goals,
+          available space, student age groups and budget.
+        </p>
+
+        <div class="service">
+          <div class="service-icon">⌘</div>
+          <div>
+            <h3>School AI & Robotics Labs</h3>
+            <p>Explore equipment planning, robotics stations, electronics,
+              coding resources and implementation options.</p>
+          </div>
+        </div>
+
+        <div class="service">
+          <div class="service-icon">⚙</div>
+          <div>
+            <h3>STEM Kits & Curriculum</h3>
+            <p>Hands-on learning resources, age-appropriate pathways,
+              coding activities and project-based education.</p>
+          </div>
+        </div>
+
+        <div class="service">
+          <div class="service-icon">✦</div>
+          <div>
+            <h3>White-Label Solutions</h3>
+            <p>Discuss school-branded workbooks, learning materials,
+              kits and programs, subject to scope and customization.</p>
+          </div>
+        </div>
+
+        <div class="service">
+          <div class="service-icon">◷</div>
+          <div>
+            <h3>Weekend & After-School Programs</h3>
+            <p>Explore coding clubs, robotics workshops, holiday camps
+              and optional paid enrichment programs.</p>
+          </div>
+        </div>
+
+        <div class="service">
+          <div class="service-icon">↗</div>
+          <div>
+            <h3>Franchise & Strategic Partnerships</h3>
+            <p>Discuss program delivery, training, branding, territory
+              requirements and potential commercial models.</p>
+          </div>
+        </div>
+
+        <div class="benefits">
+          <h3>Potential institutional benefits</h3>
+          <ul>
+            <li>Add practical technology learning to your existing offerings.</li>
+            <li>Explore optional paid workshops and after-school programs.</li>
+            <li>Differentiate your institution with project-based learning.</li>
+            <li>Build teacher confidence through training and resources.</li>
+            <li>Evaluate branded educational products and learning pathways.</li>
+            <li>Discuss additional revenue opportunities based on demand and costs.</li>
+          </ul>
+        </div>
+
+        <p class="note">
+          Program availability, pricing, branding, training, implementation
+          and commercial terms will be discussed based on your requirements.
+          Revenue depends on local demand, pricing, costs and execution.
+        </p>
+      </aside>
+
+      <section class="form-panel" id="enquiry">
+        <div class="form-heading">
+          <span class="eyebrow">Partnership Enquiry</span>
+          <h2>Tell us about your institution</h2>
+          <p>Complete the form so we can understand your requirements.</p>
+        </div>
+
+        <form id="partnershipForm">
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Full name *</label>
+              <input id="name" name="name" required autocomplete="name"
+                     placeholder="Your full name">
+            </div>
+
+            <div class="field">
+              <label for="role">Your role *</label>
+              <select id="role" name="role" required>
+                <option value="">Select your role</option>
+                <option>Principal / Head of School</option>
+                <option>School Owner / Trustee</option>
+                <option>School Administrator</option>
+                <option>Teacher / Educator</option>
+                <option>Coaching / Training Institute Owner</option>
+                <option>Education Entrepreneur</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="institution">School / Institution name *</label>
+              <input id="institution" name="institution" required
+                     placeholder="Name of your institution">
+            </div>
+
+            <div class="field">
+              <label for="type">Institution type *</label>
+              <select id="type" name="type" required>
+                <option value="">Select type</option>
+                <option>School — CBSE</option>
+                <option>School — ICSE</option>
+                <option>School — State Board</option>
+                <option>International School</option>
+                <option>Coaching / Training Institute</option>
+                <option>Preschool</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="students">Approx. student strength</label>
+              <select id="students" name="students">
+                <option value="">Select range</option>
+                <option>Below 200</option>
+                <option>200–500</option>
+                <option>501–1,000</option>
+                <option>1,001–2,000</option>
+                <option>Above 2,000</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="city">City *</label>
+              <input id="city" name="city" required placeholder="City">
+            </div>
+
+            <div class="field">
+              <label for="state">State *</label>
+              <input id="state" name="state" required placeholder="State">
+            </div>
+
+            <div class="field">
+              <label for="phone">WhatsApp / Phone *</label>
+              <input id="phone" name="phone" required type="tel"
+                     autocomplete="tel" placeholder="+91 ...">
+            </div>
+
+            <div class="field">
+              <label for="email">Work email</label>
+              <input id="email" name="email" type="email"
+                     autocomplete="email" placeholder="you@institution.com">
+            </div>
+
+            <div class="field full">
+              <label>What are you interested in? *</label>
+              <div class="checklist">
+                <label class="check"><input type="checkbox" name="interest"
+                  value="AI and robotics lab setup"> AI & robotics lab setup</label>
+                <label class="check"><input type="checkbox" name="interest"
+                  value="STEM kits and curriculum"> STEM kits & curriculum</label>
+                <label class="check"><input type="checkbox" name="interest"
+                  value="White-label branded materials"> White-label branded materials</label>
+                <label class="check"><input type="checkbox" name="interest"
+                  value="Weekend and after-school programs"> Weekend / after-school programs</label>
+                <label class="check"><input type="checkbox" name="interest"
+                  value="Teacher training"> Teacher training</label>
+                <label class="check"><input type="checkbox" name="interest"
+                  value="Franchise or strategic partnership"> Franchise / strategic partnership</label>
+                <label class="check"><input type="checkbox" name="interest"
+                  value="Coding and AI workshops"> Coding & AI workshops</label>
+                <label class="check"><input type="checkbox" name="interest"
+                  value="Need guidance choosing a model"> Need help choosing a model</label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="age">Target student age groups</label>
+              <select id="age" name="age">
+                <option value="">Select age group</option>
+                <option>3–7 years</option>
+                <option>8–10 years</option>
+                <option>11–12 years</option>
+                <option>13–14 years</option>
+                <option>15–17 years</option>
+                <option>Multiple age groups</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="timeline">Expected timeline</label>
+              <select id="timeline" name="timeline">
+                <option value="">Select timeline</option>
+                <option>Immediately</option>
+                <option>Within 1–3 months</option>
+                <option>Within 3–6 months</option>
+                <option>Planning for next academic year</option>
+                <option>Just exploring options</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="budget">Indicative budget (optional)</label>
+              <select id="budget" name="budget">
+                <option value="">Prefer to discuss first</option>
+                <option>Below ₹50,000</option>
+                <option>₹50,000–₹1 lakh</option>
+                <option>₹1–₹3 lakh</option>
+                <option>₹3–₹5 lakh</option>
+                <option>₹5 lakh+</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="details">Tell us more about your requirements</label>
+              <textarea id="details" name="details"
+                placeholder="For example: number of students, existing lab facilities, preferred programs or branding needs."></textarea>
+            </div>
+          </div>
+
+          <button class="submit" type="submit">
+            Submit Enquiry via WhatsApp ↗
+          </button>
+          <p class="privacy">
+            By continuing, you agree to share the information you entered
+            with AISTEMiQ for the purpose of responding to this enquiry.
+            Please do not include sensitive personal information.
+          </p>
+          <p class="note" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      AISTEMiQ · Imagine • Build • Innovate
+      <br>Practical STEM, coding, robotics and future technology education.
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById("partnershipForm");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!form.reportValidity()) return;
+
+      const interests = Array.from(
+        form.querySelectorAll('input[name="interest"]:checked')
+      ).map(input => input.value);
+
+      if (interests.length === 0) {
+        document.getElementById("formStatus").textContent =
+          "Please select at least one area of interest.";
+        form.querySelector('input[name="interest"]').focus();
+        return;
+      }
+
+      const data = new FormData(form);
+      const value = key => (data.get(key) || "Not provided").toString().trim();
+
+      const message = [
+        "AISTEMiQ SCHOOL & INSTITUTIONAL PARTNERSHIP ENQUIRY",
+        "",
+        "Name: " + value("name"),
+        "Role: " + value("role"),
+        "Institution: " + value("institution"),
+        "Institution type: " + value("type"),
+        "Student strength: " + value("students"),
+        "City: " + value("city"),
+        "State: " + value("state"),
+        "Phone: " + value("phone"),
+        "Email: " + value("email"),
+        "Interests: " + interests.join(", "),
+        "Age groups: " + value("age"),
+        "Timeline: " + value("timeline"),
+        "Budget: " + value("budget"),
+        "Requirements: " + value("details")
+      ].join("\n");
+
+      // Replace with your business WhatsApp number:
+      // Country code + number, digits only, no + or spaces.
+      const businessWhatsAppNumber = "919004130508";
+
+      if (businessWhatsAppNumber.includes("X")) {
+        document.getElementById("formStatus").textContent =
+          "Setup required: replace the placeholder WhatsApp number in this page's script with your business number.";
+        return;
+      }
+
+      const url = "https://wa.me/" + businessWhatsAppNumber +
+        "?text=" + encodeURIComponent(message);
+
+      window.open(url, "_blank", "noopener,noreferrer");
+    });
+  </script>
+</body>
+</html>
